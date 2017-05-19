@@ -1,63 +1,68 @@
-## Running the Udacity Deep Learning Foundations image classification project on floydhub.com
+## 在 floydhub.com 上运行优达学城深度学习基石纳米学位图像分类项目
 
-1. Create an account on [floydhub.com](https://www.floydhub.com) (don't forget to confirm your email). You will automatically receive 100 free GPU hours. 
 
-2. Install the `floyd` command on your computer:
+1. 在 [floydhub.com](https://www.floydhub.com) 上创建一个帐户（别忘了确认电子邮件）。你将自动获得 100 个免费 GPU 小时。
+
+2. 在你的计算机上运行 `floyd` 命令：
 
         pip install -U floyd-cli
-        
-    Do this even if you already installed `floyd-cli` before, just to make sure you have the most recent version (Its pace of development is fast!).
 
-3. Associate the command with your Floyd account:
+    即使你之前已经安装了 `floyd-cli`，也要执行这一步。确保你安装的是最新版本（它的开发速度很快！）。
+
+
+3. 用此命令绑定你的 Floyd 账号：
 
         floyd login
 
-    (a page with authentication token will open; you will need to copy the token into your terminal)
+    （系统会在浏览器中打开一个具有身份验证令牌的页面，你需要将该令牌复制到你的终端里）
 
-2. Clone this repository:
+4. 克隆代码库:
 
         git clone https://github.com/ludwiktrammer/deep-learning.git
 
-    Note: There are couple minor differences between this repository and the original Udacity repository. You can read about them [in README](https://github.com/ludwiktrammer/deep-learning/tree/master/image-classification#how-is-this-repository-different-from-the-original). To follow this instructions you need to use this repository.
+    注意：这个代码库与优达学城的代码库之间有些许差别。你可以在 [README](https://github.com/ludwiktrammer/deep-learning/tree/master/image-classification#how-is-this-repository-different-from-the-original) 找到详细说明。要使用这份说明一步步操作，我们建议你使用 ludwiktrammer 的代码库。
 
-3. Enter the folder for the image classification project:
+5. 进入图像分类项目文件夹：
 
         cd image-classification
 
-4. Initiate a Floyd project:
+6. 初始化 Floyd 项目：
 
         floyd init dlnd_image_classification
 
-5. Run the project:
+7. 运行项目：
 
         floyd run --gpu --env tensorflow --mode jupyter --data diSgciLH4WA7HpcHNasP9j
 
-    It will be run on a machine with GPU (`--gpu`), using a Tenserflow environment (`--env tensorflow`), as a Jupyter notebook (`--mode jupyter`), with Floyd's built-in cifar-10 dataset  available (`--data diSgciLH4WA7HpcHNasP9j`).
-    
-6. Wait for the Jupyter notebook to become available and then access the URL displayed in the terminal (described as "path to jupyter notebook"). You will see the notebook.
+    这段命令的意思是：它将在有 GPU（`--gpu`）的机器上运行，使用 Tenserflow 环境（`--env tensorflow`），使用 Jupyter 记事本（`--mode jupyter`），且可用 Floyd 的内置的 cifar-10 数据集（`--data diSgciLH4WA7HpcHNasP9j`）。
 
-7. Remember to explicitly stop the experiment when you are not using the notebook. As long as it runs (even in the background) it will cost GPU hours. You can stop an experiment in the ["Experiments" section on floyd.com](https://www.floydhub.com/experiments) or using the `floyd stop` command:
+8. 等待 Jupyter 记事本准备好，然后复制终端里显示的 URL（见 “path to jupyter notebook”）在浏览器中打开，你将看到该记事本。
+
+
+9. 当你没有使用该记事本时，请记得关闭实验（experiment）。只要实验在运行（即使是在后台运行），就会消耗 GPU 时间，而你只有 100 小时的免费时间。你可以在 floyd.com 的“[Experiments](https://www.floydhub.com/experiments)”部分，或使用 `floyd stop` 命令停止实验：
 
         floyd stop ID
- 
-    (where ID is the "RUN ID" displayed in the terminal when you run the project; if you lost it you can also find it in the ["Experiments" section on floyd.com](https://www.floydhub.com/experiments))
-    
-**Important:** When you run a project it will always start from scratch (i.e. from the state present *locally* on your computer). If you made changes in the remote jupiter notebook during a previous run, the changes will **not** be present in subsequent runs. To make them permanent you need to add the changes to your local project folder. When running the notebook you can download them directly from Jupyter - *File / Download / Notebook*. After downloading it, just replace your local `dlnd_image_classification.ipynb` file with the newly downloaded one.
 
-Alternatively, If you already stoped the experiment, you can still download the file using the `floyd output` command:
+   （其中 ID 是当你运行该项目时，在终端里显示的 “RUN ID”。如果你找不到该 ID，可以在 floyd.com 的“[Experiments](https://www.floydhub.com/experiments)”部分找到。）
+
+**重要提醒**：当你运行项目时，它将始终从头开始（即从计算机上的本地状态开始）。如果你在此前的运行中，对服务器上的  Jupiter 记事本上做了修改，这些更改将不会在之后的运行中生效。要永久保留这些更改，你需要将这些更改添加到本地项目文件夹中。运行记事本时，你可以直接从  Jupyter 菜单栏的 - *File / Download / Notebook* 下载记事本。下载完毕后，将本地的 `dlnd_image_classification.ipynb` 文件替换为新下载的文件即可。
+
+如果你已经停止实验，依然可以使用 `floyd output` 命令下载文件：
 
     floyd output ID
 
-(where ID is the "RUN ID" displayed in the terminal when you run the project; if you lost it you can also find it in the ["Experiments" section on floyd.com](https://www.floydhub.com/experiments))
-    
-Just run the command above, download `dlnd_image_classification.ipynb` and replace your local version with the newly downloaded one.
+   （其中 ID 是当你运行该项目时，在终端里显示的 “RUN ID”。如果你找不到该 ID，可以在 floyd.com 的“[Experiments](https://www.floydhub.com/experiments)”部分找到。）
 
-## How is this repository different from [the original](https://github.com/udacity/deep-learning)?
+只需运行上述命令，下载 `dlnd_image_classification.ipynb`，并将本地版本替换为新下载的文件即可。
 
-1. I added support for Floyds built-in cifar-10 dataset. If its presence is detected, it will be used, without a need to download anything. ([see the commit](https://github.com/ludwiktrammer/deep-learning/commit/2e84ff7852905f154f1692f67ca15da28ac43149), [learn more abut datasets provided by Floyd](http://docs.floydhub.com/guides/datasets/))
 
-2. I added a `floyd_requirements.txt` file, so an additional dependency is automatically taken care of. ([see the commit](https://github.com/ludwiktrammer/deep-learning/commit/80b459411d4395dacf8f46be0b028c81858bd97a), [learn more about `.floyd_requirements.txt` files](http://docs.floydhub.com/home/installing_dependencies/))
+## ludwiktrammer 代码库与[优达学城的原代码库](https://github.com/udacity/deep-learning)有何区别？
 
-3. I added a `.floydignore` file to stop local data from being uploaded to Floyd - which wastes time and may even result in a timeout ([see the commit](https://github.com/ludwiktrammer/deep-learning/commit/30d4b536b67366feef38425ce1406e969452717e), [learn more about `.floydignore` files](http://docs.floydhub.com/home/floyd_ignore/))
+1. 添加了对 Floyds built-in cifar-10 数据集的支持。如果检测到该数据集，将直接使用，无需再下载任何文件。（[见此 commit](https://github.com/ludwiktrammer/deep-learning/commit/2e84ff7852905f154f1692f67ca15da28ac43149)，[详细了解 Floyd 提供的数据集](http://docs.floydhub.com/guides/datasets/)）
 
-3. I added this README
+2. 添加了 `floyd_requirements.txt` 文档，自动处理另一个依赖问题。（[见此 commit](https://github.com/ludwiktrammer/deep-learning/commit/80b459411d4395dacf8f46be0b028c81858bd97a)，[详细了解 `.floyd_requirements.txt` 文档](http://docs.floydhub.com/home/installing_dependencies/)）
+
+3. 添加了 `.floydignore` 文档，防止上传本地数据到 Floyd，以免浪费时间，甚至出现超时的问题。（([见此 commit](https://github.com/ludwiktrammer/deep-learning/commit/30d4b536b67366feef38425ce1406e969452717e)，[详细了解 `.floydignore` 文档](http://docs.floydhub.com/home/floyd_ignore/))
+
+4. 添加了这个 README
+
