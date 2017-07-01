@@ -19,5 +19,5 @@ image_classification.data-*
 image_classification.index
 image_classification.meta
 preprocess_batch_*.p
-preprocess_training.p
+preprocess_test.p
 preprocess_validation.p
