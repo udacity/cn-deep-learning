@@ -214,7 +214,7 @@ class Dataset(object):
         while current_index + batch_size <= self.shape[0]:
             data_batch = get_batch(
                 self.data_files[current_index:current_index + batch_size],
-                self.shape[1],self.shape[2],self.shape[3],
+                self.shape[1],self.shape[2],
                 self.image_mode)
 
             current_index += batch_size
