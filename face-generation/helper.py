@@ -133,7 +133,7 @@ def download_extract(database_name, data_path):
     DATASET_MNIST_NAME = 'mnist'
 
     if database_name == DATASET_CELEBA_NAME:
-        url = 'https://s3-us-west-1.amazonaws.com/udacity-dlnfd/datasets/celeba.zip'
+        url = 'https://s3.cn-north-1.amazonaws.com.cn/static-documents/nd101/celeba.zip'
         hash_code = '00d2c5bc6d35e252742224ab0c1e8fcb'
         extract_path = os.path.join(data_path, 'img_align_celeba')
         save_path = os.path.join(data_path, 'celeba.zip')
