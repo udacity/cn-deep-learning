@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+  <name>quad_controller_rl</name>
+  <version>0.0.0</version>
+  <description>Learns to control a quadcopter using Reinforcement Learning. Based on quad_controller from Udacity/RoboND.</description>
+
+  <license>CC BY-NC-ND 2.0</license>
+  <url type="website">https://www.udacity.com</url>
+
+  <author email="arpan@udacity.com">Arpan Chakraborty</author>
+  <maintainer email="arpan@udacity.com">Arpan Chakraborty</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>std_srvs</build_depend>
+
+  <run_depend>rospy</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>std_srvs</run_depend>
+</package>
