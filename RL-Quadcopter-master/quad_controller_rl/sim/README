@@ -1,4 +1,0 @@
-(Optional) To launch simulator automatically:
-- Save the simulator for your platform here (or symlink it). Must be an executable named "DroneSim".
-- Or, specify full path in command-line arg to roslaunch, e.g.:
-    roslaunch quad_controller_rl rl_controller.launch sim:=/home/my_user/my_sim_dir/DroneSim.x86_64
