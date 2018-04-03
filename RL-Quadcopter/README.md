@@ -21,7 +21,7 @@ _指导四轴飞行器学会飞行！_
 
 下载压缩的 VM 磁盘镜像并解压：
 
-- 压缩的 VM 磁盘镜像：[RoboVM_V2.1.0.zip](https://s3-us-west-1.amazonaws.com/udacity-robotics/Virtual+Machines/Lubuntu_071917/RoboVM_V2.1.0.zip)
+- 压缩的 VM 磁盘镜像：[RoboVM_V2.1.0.zip](https://s3.cn-north-1.amazonaws.com.cn/static-documents/nd101/DQN/RoboVM_V2.1.0.zip)
 - MD5 校验和：`MD5(Ubuntu 64-bit Robo V2.1.0.ova)= 95bfba89fbdac5f2c0a2be2ae186ddbb`
 
 你还需要一个虚拟机软件来运行 VM，比如 VMWare 或 VirtualBox：
@@ -62,7 +62,7 @@ $ mkdir catkin_ws
 $ cd catkin_ws
 $ mkdir src
 $ cd src
-$ git clone https://github.com/udacity/cn-deep-learning/RL-Quadcopter.git
+$ git clone https://github.com/udacity/RL-Quadcopter.git
 ```
 
 你的目录结构应如下所示（ROS 的编译系统相当复杂，在之后的内容中你也将了解到这一点）：
