@@ -40,7 +40,7 @@ _指导四轴飞行器学会飞行！_
 
 ## ROS 本地安装
 
-如果你选择在你的电脑本地安装 ROS，我们建议你使用 Ubuntu 16.04 LTS 作为操作系统。请参照 [ROS 安装指南] (http://wiki.ros.org/kinetic/Installation)进行安装。
+如果你选择在你的电脑本地安装 ROS，我们建议你使用 Ubuntu 16.04 LTS 作为操作系统。请参照 [ROS 安装指南](http://wiki.ros.org/kinetic/Installation)进行安装。
 
 _请注意：优达学城并不支持此方法。如果你在本地安装 ROS 时出现问题，请访问 [ROS 疑难解答](http://answers.ros.org/questions/)或优达学城机器人开发的 Slack 社区（[robotics.udacity.com](https://www.robotics.udacity.com)），并在 **#ros** 频道中与其他学员讨论解决方法。_
 
@@ -62,7 +62,7 @@ $ mkdir catkin_ws
 $ cd catkin_ws
 $ mkdir src
 $ cd src
-$ git clone https://github.com/udacity/RL-Quadcopter.git
+$ git clone https://github.com/udacity/cn-deep-learning/RL-Quadcopter.git
 ```
 
 你的目录结构应如下所示（ROS 的编译系统相当复杂，在之后的内容中你也将了解到这一点）：
@@ -170,10 +170,10 @@ $ roslaunch quad_controller_rl rl_controller.launch
 当不同节点启动时，你可以在终端中看见一些信息。此时你可以运行模拟器，这是一个单独的 Unity 应用（请注意，你必须先启动 ROS，再运行模拟器）。在模拟器初始化完成后，你将在 ROS 终端中看见其他信息，表示每隔几秒飞行器都会进入新的阶段。当飞行器接收到来自智能体的控制输入时，模拟器中飞行器的螺旋桨应当开始转动，并且这应当在每个阶段开始时重置。
 
 
-小贴士：根据默认设置，每当你想要运行飞行器的模拟器时，你都需要按步骤建立和运行。如果你不想重复这两个步骤，可以编辑 `quad_controller_rl/scripts/drone_sim` 脚本，输入运行模拟器应用的命令。[这里] (https://discussions.udacity.com/t/importerror-when-running-roslaunc-quad-controller-rl-rl-controller-launch/569530/2)有一个范例。接着，ROS 将自动启动模拟器。
+小贴士：根据默认设置，每当你想要运行飞行器的模拟器时，你都需要按步骤建立和运行。如果你不想重复这两个步骤，可以编辑 `quad_controller_rl/scripts/drone_sim` 脚本，输入运行模拟器应用的命令。[这里](https://discussions.udacity.com/t/importerror-when-running-roslaunc-quad-controller-rl-rl-controller-launch/569530/2)有一个范例。接着，ROS 将自动启动模拟器。
 
 
-_请注意：如果你想了解更多有关 ROS 的信息，以及如何将它应用于机器学习的应用中，你可以加入优达学城的 [机器人开发纳米学位] (https://cn.udacity.com/course/robotics-nanodegree--nd209)并学习 [ROS 基础知识]( https://classroom.udacity.com/nanodegrees/nd209/parts/af07ae99-7d69-4b45-ab98-3fde8b576a16)模块。_
+_请注意：如果你想了解更多有关 ROS 的信息，以及如何将它应用于机器学习的应用中，你可以加入优达学城的 [机器人开发纳米学位](https://cn.udacity.com/course/robotics-nanodegree--nd209)并学习 [ROS 基础知识]( https://classroom.udacity.com/nanodegrees/nd209/parts/af07ae99-7d69-4b45-ab98-3fde8b576a16)模块。_
 
 ## 实现
 
