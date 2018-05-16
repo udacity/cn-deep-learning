@@ -62,8 +62,7 @@ $ mkdir catkin_ws
 $ cd catkin_ws
 $ mkdir src
 $ cd src
-$ git clone https://github.com/udacity/cn-deep-learning.git
-$ cd RL-Quadcopter
+$ git clone https://github.com/udacity/RL-Quadcopter.git
 ```
 
 你的目录结构应如下所示（ROS 的编译系统相当复杂，在之后的内容中你也将了解到这一点）：
