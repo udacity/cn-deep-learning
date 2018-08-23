@@ -27,7 +27,7 @@ python -m ipykernel install --user --name quadcop --display-name "quadcop"
 
 4. 打开 notebook。
 ```
-jupyter notebook Quadcopter_Project.ipynb
+jupyter notebook Quadcopter_Project_zh.ipynb
 ```
 
 5. 在运行代码之前，请使用 drop-down 菜单（**Kernel > Change kernel > quadcop**） 修改 kernel 以适应 `quadcop` 环境。接着请按照 notebook 中的说明进行操作。
